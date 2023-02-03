@@ -1,4 +1,4 @@
-# Thanh viên
+# Thành viên
 - Mai Ngọc Duy - 21020512: https://github.com/AESir2412
 - Lương Đình Dũng - 21021466:
 - Nguyễn Tiến Bắc - 21021455:
