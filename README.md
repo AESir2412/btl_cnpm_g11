@@ -1,9 +1,9 @@
 # Thành viên
 - Mai Ngọc Duy - 21020512: https://github.com/AESir2412
-- Lương Đình Dũng - 21021466:
-- Nguyễn Tiến Bắc - 21021455:
-- Nguyễn Đình Thành Đạt - 21021476:
-- Nguyễn Huy Dũng - 21020612:
+- Lương Đình Dũng - 21021466: https://github.com/luongdzung
+- Nguyễn Tiến Bắc - 21021455: https://github.com/nguyentienbac6
+- Nguyễn Đình Thành Đạt - 21021476: https://github.com/ndtd128
+- Nguyễn Huy Dũng - 21020612: https://github.com/ngdung2511
 
 # Bài tập lớn CNPM - Tên .....
 
