@@ -1,0 +1,16 @@
+{
+    "directory": [
+    ],
+    "sql_file": "",
+    "files": [
+      {
+          "root_directory"    : "update/update_2.4/application/controllers/Home.php",
+          "update_directory"  : "application/controllers/Home.php"
+      },
+      {
+          "root_directory"    : "update/update_2.4/application/views/backend/login.php",
+          "update_directory"  : "application/views/backend/login.php"
+      }
+
+    ]
+  }
