@@ -477,9 +477,9 @@ class Browse extends CI_Controller {
 		if ($this->session->userdata('login_type') == 1)
 			return;
 
-		$subscription_validation	=	$this->crud_model->validate_subscription();
-		if ($subscription_validation == false)
-			redirect(base_url().'index.php?browse/youraccount' , 'refresh');
+		// $subscription_validation	=	$this->crud_model->validate_subscription();
+		// if ($subscription_validation == false)
+		// 	redirect(base_url().'index.php?browse/youraccount' , 'refresh');
 	}
 
 	function login_check()

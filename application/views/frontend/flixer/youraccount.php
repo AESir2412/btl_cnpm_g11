@@ -87,6 +87,18 @@
 								<?php echo get_phrase('Change_Password');?></a>
 						</div>
 					</div>
+
+					<?php //// Phan a Dat code them de xoa tai khoan?>
+					<div class="row" style="margin: 5px;">
+						<?php // Phan a Dat code them de xoa tai khoan?>
+						<div class ="pull-right">
+							<a href="<?php echo base_url();?>index.php?home/delete_account/ <?php echo $user_id;?>"
+							style="color:red" onclick="return confirm('Want to delete?')">
+								<?php echo get_phrase('delete_account');?>
+							</a>
+						</div>
+					</div>
+
 				</div>
 			</div>
 			<hr>
@@ -171,6 +183,7 @@
 							<a href="<?php echo base_url();?>index.php?browse/manageprofile" class="blue_text">
 								<?php echo get_phrase('Manage_profiles');?></a>
 						</div>
+						
 					</div>
 				</div>
 			</div>

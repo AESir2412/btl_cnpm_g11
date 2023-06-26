@@ -388,7 +388,7 @@
     "terms_and_conditions": "Terms and conditions",
     "faq": "Faq",
     "frequently_asked_question": "Frequently asked question",
-    "creativeitem": "Creativeitem",
+    "creativeitem": "Group 9",
     "visit_website": "Visit website",
     "purchase_packages": "Purchase packages",
     "purchase_package": "Purchase package",
@@ -677,6 +677,7 @@
     "mark_as_none_featured": "Mark as none featured",
     "remove_from_featured": "Remove from featured",
     "sign_up": "Sign up",
+    "delete_account": "Delete account",
     "login": "Login",
     "install_update": "Install update",
     "mark_as_delete": "Mark as delete",
@@ -1090,5 +1091,6 @@
     "edit_country": "Edit country",
     "all_countries": "All countries",
     "your_email_password": "Your email password",
-    "product_updated_successfully": "Product updated successfully"
+    "product_updated_successfully": "Product updated successfully",
+    "plan": "Plan"
 }

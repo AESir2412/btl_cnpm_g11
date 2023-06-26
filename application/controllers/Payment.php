@@ -94,7 +94,7 @@ Class Payment extends CI_Controller {
 
             $this->session->set_flashdata('payment_status', 'success');
             echo 'success';
-            //redirect(base_url().'index.php?browse/youraccount' , 'refresh');
+            redirect(base_url().'index.php?browse/youraccount' , 'refresh');
         }
     }
 }

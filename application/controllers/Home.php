@@ -183,4 +183,10 @@ class Home extends CI_Controller {
 			redirect(base_url().'index.php?browse/home' , 'refresh');
 	}
 
+	function delete_account($user_id = '') 
+	{
+		$this->db->delete('user', array('user_id' => $user_id));
+		$this->signout();
+	}
+
 }

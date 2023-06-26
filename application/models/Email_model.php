@@ -48,36 +48,44 @@ class Email_model extends CI_Model {
 
 
 	public function send_smtp_mail($msg=NULL, $sub=NULL, $to=NULL, $from=NULL) {
-		//Load email library
-		$this->load->library('email');
+		// //Load email library
+		// $this->load->library('email');
 
-		if($from == NULL)
-			$from		=	$this->db->get_where('settings' , array('type' => 'site_email'))->row('value');
+		// if($from == NULL)
+		// 	$from		=	$this->db->get_where('settings' , array('type' => 'site_email'))->row('value');
 
-		//SMTP & mail configuration
-		$config = array(
-			'protocol'  => get_settings('protocol'),
-			'smtp_host' => get_settings('smtp_host'),
-			'smtp_port' => get_settings('smtp_port'),
-			'smtp_user' => get_settings('smtp_user'),
-			'smtp_pass' => get_settings('smtp_pass'),
-			'mailtype'  => 'html',
-			'charset'   => 'utf-8'
-		);
-		$this->email->set_header('MIME-Version', 1.0);
-		$this->email->set_header('Content-type', 'text/html');
-		$this->email->set_header('charset', 'UTF-8');
+		// //SMTP & mail configuration
+		// $config = array(
+		// 	'protocol'  => get_settings('protocol'),
+		// 	'smtp_host' => get_settings('smtp_host'),
+		// 	'smtp_port' => get_settings('smtp_port'),
+		// 	'smtp_user' => get_settings('smtp_user'),
+		// 	'smtp_pass' => get_settings('smtp_pass'),
+		// 	'mailtype'  => 'html',
+		// 	'charset'   => 'utf-8'
+		// );
+		// $this->email->set_header('MIME-Version', 1.0);
+		// $this->email->set_header('Content-type', 'text/html');
+		// $this->email->set_header('charset', 'UTF-8');
 		
-		$this->email->initialize($config);
-		$this->email->set_mailtype("html");
-		$this->email->set_newline("\r\n");
+		// $this->email->initialize($config);
+		// $this->email->set_mailtype("html");
+		// $this->email->set_newline("\r\n");
 
-		$this->email->to($to);
-		$this->email->from($from, get_settings('site_name'));
-		$this->email->subject($sub);
-		$this->email->message($msg);
+		// $this->email->to($to);
+		// $this->email->from($from, get_settings('site_name'));
+		// $this->email->subject($sub);
+		// $this->email->message($msg);
 
-		//Send email
-		$this->email->send();
+		// //Send email
+		// $this->email->send();
+
+	$headers  = 'From: maaingocduy24@gmail.com' . "\r\n" .
+            'MIME-Version: 1.0' . "\r\n" .
+            'Content-type: text/html; charset=utf-8';
+	if(mail($to, $sub, $msg, $headers))
+    	echo "Email sent";
+	else
+    	echo "Email sending failed";
 	}
 }

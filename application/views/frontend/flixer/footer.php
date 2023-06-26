@@ -7,7 +7,7 @@
 				<li><a href="<?php echo base_url();?>index.php?general/refundpolicy"><?php echo get_phrase('Refund_Policy');?></a></li>
 				<li><a href="<?php echo base_url();?>index.php?home/signin/admin"><?php echo get_phrase('admin');?></a></li>
 			</ul>
-			<p>Made by <a href="http://creativeitem.com/" rel="nofollow">Creativeitem</a>. <a href="http://support.creativeitem.com/" target="_blank">Get support</a>.</p>
+			<p>Made by Group 9</p>
 		</div>
 	</div>
 </footer>

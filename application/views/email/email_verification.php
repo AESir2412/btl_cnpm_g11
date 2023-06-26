@@ -437,6 +437,8 @@
                                               <p>Welcome to <a title="<?= get_settings('site_name'); ?>" target="_blank" href="<?= site_url(); ?>"><?= get_settings('site_name'); ?></a>. We'd love to make sure we've got the right email for you.</p>
                                               <br>
                                               <p>Your verification code is <b style="cursor: pointer;" ><u><?= $verification_code; ?></u></b></p>
+                                              <p>Please enter the 6-digit code to gain access to our website.</p>
+                                              <p>Thank you for choosing WatchFlick!</p>
                                               <hr style="border: 1px solid #efefef; margin-top: 50px;">
                                               <p style="text-align: center;"><a title="<?= get_settings('site_name'); ?>" target="_blank" href="<?= site_url(); ?>"><?= get_settings('site_name'); ?></a></p>
                                             </div>
