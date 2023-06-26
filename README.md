@@ -5,68 +5,37 @@
 - Nguyễn Đình Thành Đạt - 21021476: https://github.com/ndtd128
 - Nguyễn Huy Dũng - 21020612: https://github.com/ngdung2511
 
-# Bài tập lớn CNPM - Tên .....
+# Bài tập lớn CNPM - Hệ thống website xem phim trực tuyến WatchFlick
 
-Trong bài tập lớn này, nhóm em đã viết lại một phiên bản Java mô phỏng lại trò chơi [Bomberman](https://www.youtube.com/watch?v=mKIOVwqgSXM) kinh điển của NES.
+Trong bài tập lớn này, nhóm em đã dựa vào các kiến thức đã học mông Công nghệ phần mềm làm nền móng xây dưng, đi kèm với các kiến thức xây dựng web để xây dựng Hệ thống website xem phim trực tuyến WatchFlick
 
-<img src="resources/gameScreenDemo.PNG" alt="drawing" width="800"/>
+<img src="image.png" alt="drawing" width="800"/>
 
-Trên đây là hình ảnh mô phỏng giao diện trò chơi.
+Trên đây là hình ảnh mô phỏng giao diện web xem phim.
 
-## Mô tả về các đối tượng trong trò chơi
-Nếu bạn đã từng chơi Bomberman, bạn sẽ cảm thấy quen thuộc với những đối tượng này. Chúng được được chia làm hai loại chính là nhóm đối tượng động (*Bomber*, *Enemy*, *Bomb*) và nhóm đối tượng tĩnh (*Grass*, *Wall*, *Brick*, *Door*, *Item*).
+## Giới thiệu
+  Trong xã hội ngày nay, cùng với sự phát triển chung của toàn xã hội, nhu cầu của con người về các mặt trong đời sống cũng ngày một tăng cao. Từ những nhu cầu đơn giản nhưng mật thiết hằng ngày về lương thực thực phẩm, quần áo,… cho tới những nhu cầu lớn hơn như về mặt thể chất, an ninh, thẩm mỹ,… tất cả đều đã và đang được xem xét, dần trở thành những mục tiêu con người hướng tới để có thể đạt tới sự hoàn thiện.
 
-- ![](res/sprites/player_down.png) *Bomber* là nhân vật chính của trò chơi. Bomber có thể di chuyển theo 4 hướng trái/phải/lên/xuống theo sự điều khiển của người chơi. 
-- ![](res/sprites/balloom_left1.png) *Enemy* là các đối tượng mà Bomber phải tiêu diệt hết để có thể qua Level. Enemy có thể di chuyển ngẫu nhiên hoặc tự đuổi theo Bomber tùy theo loại Enemy. Các loại Enemy sẽ được mô tả cụ thể ở phần dưới.
-- ![](res/sprites/bomb.png) *Bomb* là đối tượng mà Bomber sẽ đặt và kích hoạt tại các ô Grass. Khi đã được kích hoạt, Bomber và Enemy không thể di chuyển vào vị trí Bomb. Tuy nhiên ngay khi Bomber vừa đặt và kích hoạt Bomb tại ví trí của mình, Bomber có một lần được đi từ vị trí đặt Bomb ra vị trí bên cạnh. Sau khi kích hoạt 2s, Bomb sẽ tự nổ, các đối tượng *Flame* ![](res/sprites/explosion_horizontal.png) được tạo ra.
+	Một trong số những nhu cầu không thể không kể đến, đó chính là các nhu cầu giải trí bằng phim ảnh, truyền hình - một sân chơi màu mỡ nhưng đầy thách thức đối với các nhà sản xuất. Covid-19 xuất hiện liên tục trong hai năm vừa qua đã làm thay đổi nhiều thói quen, hành vi của khán giản. Nếu trước đây, nếu muốn được thưởng thức các tiết mục sân khấu điện ảnh, ta phải đặt vé và đến tham dự trực tiếp các buổi trình diễn, thì giờ đây, họ có vô vàn lựa chọn cho phim chỉ qua vài nút nhấn với các thiết bị điện tử. Dịch bệnh tuy đã đem đến nhiều khó khăn, nhưng đã một phần giúp “đốt cháy” giai đoạn trên: Thời gian ở nhà tăng lên khiến người dân tìm cách chuyển đổi hình thức giải trí bằng việc theo dõi, đăng ký, sử dụng các trong mạng xã hội,… để theo dõi những bộ phim này.
+
+	Một trong những phương thức, đặc biệt là trong cộng đồng giới trẻ, hay tìm đến trong việc giải trí trên chính là việc truy cập các website xem phim trực tuyến. Với sự phát triển của trang web như YouTube, Vimeo, Netflix, Dailymotion,…, người dùng ngày này có thể dễ dàng hưởng trọn, thưởng thức những bộ phim chiếu rạp, ti-vi mới ra gần đây nhất với chi phí rất nhỏ so với trước đây, hoặc thậm chí là hoàn toàn miễn phí.
+
+	Hiểu được nhu cầu người dùng cũng như phát triển từ những nền tảng kể trên, chúng tôi đã phát triển ra hệ thống web xem phim trực tuyến WatchFlick với mong muốn có thể áp dụng được những kiến thức công nghệ thông tin đã học để xây dựng một trang web giúp người dùng dễ dàng tận hưởng những thước phim hay và mới nhất hiện có trên thị trường, qua đó đem lại một thời gian giải trí vui vẻ, cũng như thúc đẩy, mở rộng hóa tên tuổi của những bộ phim thịnh hành ngày nay.
+
+	WatchFlick được thiết kế dưới dạng một website, vì vậy dễ dàng chạy được ở bất kì loại thiết bị điện tử thông minh nào, từ điện thoại đến máy tính cá nhân. Chỉ cần có kết nối Internet, người dùng có thể tìm kiếm, thưởng thức những bộ phim mình mong muốn. Ngoài ra, phần mềm còn hỗ trợ một số hoạt động như thêm vào danh sách yêu thích, tìm kiếm theo chủ đề,… tất cả với mong muốn đem lại cho người dùng khoảng thời gian tốt nhất khi xem phim tại trang web.
+
+	Đối tượng người dùng chúng tôi hướng đến ở đây là bất cứ ai có khả năng truy cập website thông qua các thiết bị điện tử và có mong muốn xem phim. WatchFlick hiện tại hỗ trợ 2 loại ngôn ngữ chính là Tiếng Việt và Tiếng Anh, và cho phép mở rộng thêm nhiều loại ngôn ngữ khác nhau phù hợp với người dùng.
 
 
-- ![](res/sprites/grass.png) *Grass* là đối tượng mà Bomber và Enemy có thể di chuyển xuyên qua, và cho phép đặt Bomb lên vị trí của nó
-- ![](res/sprites/wall.png) *Wall* là đối tượng cố định, không thể phá hủy bằng Bomb cũng như không thể đặt Bomb lên được, Bomber và Enemy không thể di chuyển vào đối tượng này
-- ![](res/sprites/brick.png) *Brick* là đối tượng được đặt lên các ô Grass, không cho phép đặt Bomb lên nhưng có thể bị phá hủy bởi Bomb được đặt gần đó. Bomber và Enemy thông thường không thể di chuyển vào vị trí Brick khi nó chưa bị phá hủy.
+## Repository này chứa 
+- Bản báo cáo dạng Doc (142 trang)
 
+- Bản báo cáo dạng PDF (142 trang)
 
-- ![](res/sprites/portal.png) *Portal* là đối tượng được giấu phía sau một đối tượng Brick. Khi Brick đó bị phá hủy, Portal sẽ hiện ra và nếu tất cả Enemy đã bị tiêu diệt thì người chơi có thể qua Level khác bằng cách di chuyển vào vị trí của Portal.
+- Slide thuyết trình
 
-Các *Item* cũng được giấu phía sau Brick và chỉ hiện ra khi Brick bị phá hủy. Bomber có thể sử dụng Item bằng cách di chuyển vào vị trí của Item. Thông tin về chức năng của các Item được liệt kê như dưới đây:
-- ![](res/sprites/powerup_speed.png) *SpeedItem* Khi sử dụng Item này, Bomber sẽ được tăng vận tốc di chuyển thêm một giá trị thích hợp
-- ![](res/sprites/powerup_flames.png) *FlameItem* Item này giúp tăng phạm vi ảnh hưởng của Bomb khi nổ (độ dài các Flame lớn hơn)
-- ![](res/sprites/powerup_bombs.png) *BombItem* Thông thường, nếu không có đối tượng Bomb nào đang trong trạng thái kích hoạt, Bomber sẽ được đặt và kích hoạt duy nhất một đối tượng Bomb. Item này giúp tăng số lượng Bomb có thể đặt thêm một.
-- ![](res/sprites/powerup_flamepass.png) *ImmortalItem* (*New!*) Giúp cho bạn trở nên bất tử! Flame của Bomb và Enemy sẽ không tác động tới bạn trong thời gian này.
+- Video Demo sản phẩm: 
+Link: https://drive.google.com/file/d/1c6ebZECrmatTo8FEPoIv_Q6_hkxI5Jdm/view?fbclid=IwAR20yfxdB01mE-0Ao3fK_VOI50aR2WOzajzLkyPNBtdruFQTKOvZBDvSPa0
 
-(*Lưu ý: Tất cả các Item đã được set mặc định chỉ duy trì trong 8s*)
+- và cái README.md bạn đang đọc :D 
 
-Có nhiều loại Enemy trong Bomberman, tuy nhiên trong phiên bản này chỉ yêu cầu cài đặt hai loại Enemy dưới đây (nếu cài đặt thêm các loại khác sẽ được cộng thêm điểm):
-- ![](res/sprites/balloom_left1.png) *Balloom* là Enemy đơn giản nhất, di chuyển ngẫu nhiên với vận tốc cố định
-- ![](res/sprites/oneal_left1.png) *Oneal* có tốc độ di chuyển thay đổi, lúc nhanh, lúc chậm và di chuyển "thông minh" hơn so với Balloom (biết đuổi theo Bomber)
-- ![](res/sprites/doll_left1.png) *Dahl* (*New!*) di chuyển ngẫu nhiên, tốc độ thay đổi ngẫu nhiên mỗi lần chạm tường
-- ![](res/sprites/ghosty.PNG) *Ghost* (*New!*) tương tự Balloom, nhưng nhanh gấp đôi một cách chóng mặt và có thể đi qua Brick, đổi hướng khi gặp vật cản tĩnh 
-
-## Mô tả game play, xử lý va chạm và xử lý bom nổ
-- Trong một màn chơi, Bomber sẽ được người chơi di chuyển, đặt và kích hoạt Bomb với mục tiêu chính là tiêu diệt tất cả Enemy và tìm ra vị trí Portal để có thể qua màn mới
-- Bomber sẽ bị giết khi va chạm với Enemy hoặc thuộc phạm vi Bomb nổ. Lúc đấy trò chơi kết thúc.
-- Enemy bị tiêu diệt khi thuộc phạm vi Bomb nổ
-- Một đối tượng thuộc phạm vi Bomb nổ có nghĩa là đối tượng đó va chạm với một trong các tia lửa được tạo ra tại thời điểm một đối tượng Bomb nổ.
-
-- Khi Bomb nổ, một Flame trung tâm![](res/sprites/bomb_exploded.png) tại vị trí Bomb nổ và bốn Flame tại bốn vị trí ô đơn vị xung quanh vị trí của Bomb xuất hiện theo bốn hướng trên![](res/sprites/explosion_vertical.png)/dưới![](res/sprites/explosion_vertical.png)/trái![](res/sprites/explosion_horizontal.png)/phải![](res/sprites/explosion_horizontal.png). Độ dài bốn Flame xung quanh mặc định là 1 đơn vị, được tăng lên khi Bomber sử dụng các FlameItem.
-- Khi các Flame xuất hiện, nếu có một đối tượng thuộc loại Brick/Wall nằm trên vị trí một trong các Flame thì độ dài Flame đó sẽ được giảm đi để sao cho Flame chỉ xuất hiện đến vị trí đối tượng Brick/Wall theo hướng xuất hiện. Lúc đó chỉ có đối tượng Brick/Wall bị ảnh hưởng bởi Flame, các đối tượng tiếp theo không bị ảnh hưởng. Còn nếu vật cản Flame là một đối tượng Bomb khác thì đối tượng Bomb đó cũng sẽ nổ ngay lập tức.
-
-## Yêu cầu chung
-- Có thể chơi được ít nhất cho một màn chơi (chiến thắng một màn chơi)
-- Có thể thay đổi được tệp cấu hình khác cho màn chơi (tương tự mẫu cho trước)
-
-## Các tính năng đã hoàn thiện
-- Gói bắt buộc 
-1. Thiết kế cây thừa kế cho các đối tượng game 
-2. Xây dựng bản đồ màn chơi từ tệp cấu hình (có mẫu tệp cấu hình, xem [tại đây](https://raw.githubusercontent.com/bqcuong/bomberman-starter/starter-2/res/levels/Level1.txt))
-3. Di chuyển Bomber theo sự điều khiển từ người chơi 
-4. Tự động di chuyển các Enemy 
-5. Xử lý va chạm cho các đối tượng Bomber, Enemy, Wall, Brick, Bomb 
-6. Xử lý bom nổ 
-7. Xử lý khi Bomber sử dụng các Item và khi đi vào vị trí Portal 
-
-- Gói tùy chọn
-1. Tạo và nâng cấp thuật toán tìm đường cho Enemy, tạo thêm 2 loại Enemy mới (Dahl và Ghost)
-2. Xử lý hiệu ứng âm thanh (thêm music & sound effects) 
-3. Tính năng chọn Skin cho người chơi trước game (hiện tại có 4 skin)
-4. Tạo Menu trước Game và trong Game, với một số chức năng cơ bản
